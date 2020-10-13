@@ -37,9 +37,7 @@ body {
     flex-wrap: wrap;
 }    
 
-.content{
-    padding: 1rem 1.5rem; 
-}
+
 
 .main-menu ul{
     display: flex;
@@ -74,12 +72,13 @@ body {
 }
 
 .main-menu ul li a{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-grey-dark-1);
     padding: 1rem;
     margin-top: 0.5rem;
+    transition: transform ease 1s;
 }
 
 .main-menu ul li a:link {
@@ -91,7 +90,22 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    color: #fff;
+    color: #fff;   
+}
+
+/* .main-content{
+    transition: all 2s ease;
+} */
+
+.content .main-menu ul li a:focus{
+    transform: scale(1.1);
+}
+
+/* .block{
+    display: block !important;
+} */
+.detail-main-content{
+    -webkit-animation: scale ease-in-out 1.5s forwards;
 }
 
 .content{
@@ -100,6 +114,19 @@ body {
     flex-direction: column;
     justify-content: space-between;
     z-index: 999;
+    padding: 1rem 0 0 1rem;
+}
+
+@keyframes scale {
+    0%{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+  
+    100%{
+        opacity: 1;
+        transform: scale(1.03);
+    }
 }
 
 .slider{
@@ -116,9 +143,9 @@ body {
     -moz-mask-size: cover;
     width: 100vw;
     height: 100vh;
-    -moz-box-shadow: inset 30px -21px 170px 42px #000000;;
-    -webkit-box-shadow: inset 30px -21px 170px 42px #000000;;
-    box-shadow: inset 30px -21px 170px 42px #000000;
+    /* -moz-box-shadow: inset 11rem -4.6rem 7.6rem 3.5rem #0000009c;
+    -webkit-box-shadow: inset 11rem -4.6rem 7.6rem 3.5rem #0000009c;
+    box-shadow: inset 11rem -4.6rem 7.6rem 3.5rem #0000009c; */
     /*-- Add desktop keyframe animation via bourbon mixin --*/
     -webkit-animation: slider-lg ease-in-out 20s both infinite;
 }
@@ -164,10 +191,6 @@ body {
     text-align: justify;
 }
 
-.visible{
-    display: none;
-}
-
 .main-content .read_more{
     background-image: url("../img/brush-3.png");
     background-repeat: no-repeat;
@@ -190,13 +213,21 @@ body {
 .main-footer{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: wrap;
+    padding: 1rem 0 1rem 1rem;
 }
 
 .footer-content p{
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.1rem;
+}
+
+.left p{
+    text-align: left;
+}
+
+.right p{
+    text-align: right;
 }
 
 .footer-img{
@@ -207,9 +238,18 @@ body {
     width: 10rem;
 }
 
-.footer-social{
+.copyright{
     position: absolute;
     right: 2rem;
+}
+
+.copyright p{
+    color: #fff;
+}
+
+.footer-social{
+    position: absolute;
+    right: 25rem;
 }
 
 .footer-social i{

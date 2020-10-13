@@ -15,7 +15,7 @@
                 <ul>
                     <li>
                         <img src="img/french-flag.png" alt="">
-                        <a id="fr-link" href="#">Francais</a>
+                        <a id="fr-link" href="#">FRANÇAIS</a>
                         <div class="brush">
                             <img src="img/brush-1.png" alt="">
                         </div>
@@ -36,7 +36,7 @@
                     </li>
                     <li>
                         <img src="img/spain-flag.png" alt="">
-                        <a id="es-link" href="#">Espanol</a>
+                        <a id="es-link" href="#">ESPAÑOL</a>
                         <div class="brush">
                             <img src="img/brush-1.png" alt="">
                         </div>
@@ -105,18 +105,35 @@
                 
             </div>
             <footer class="main-footer">
+                <div class="footer-content left">
+                    <p><strong>Head office :</strong>
+                        <br>22 Nguyen Trong Loi St., 
+                        <br>Ward 4, Tan Binh District, 
+                        <br>Ho Chi Minh City, Vietnam
+                        <!-- <br>© 2020 Images-Travel. All rights reserved. -->
+                    </p>
+                </div>
                 <div class="footer-img">
                     <img src="img/logo.png" alt="Logo ImageTravel">
                 </div>
-                <div class="footer-content">
-                    <p>22 Nguyen Trong Loi St., Ward 4, Tan Binh District, Ho Chi Minh City, Vietnam
-                        <br>© 2020 Images-Travel. All rights reserved.</p>
+                <div class="footer-content right">
+                    <p><strong>Business license :</strong>
+                        <br>0312432735
+                        <br>International Tour Operator Licence: 
+                        <br>79-237/2014/TCDL-GP LHQT
+                        <!-- <br>© 2020 Images-Travel. All rights reserved. -->
+                    </p>
                 </div>
-                <div class="footer-social">
+                <div class="footer-content footer-social">
                     <i class="fa fa-facebook-f"></i>
                     <i class="fa fa-instagram"></i>
                     <i class="fa fa-linkedin"></i>
                 </div>
+                <div class="footer-content copyright">
+                    <p>
+                        © 2020 Images-Travel. All rights reserved.
+                    </p>
+                </div>    
             </footer>
         </section>
         <section class="slider">
@@ -127,15 +144,16 @@
 </body>
 <script>
     const links = document.querySelectorAll(".main-menu ul li a");
-    const contents = document.querySelectorAll(".detail-main-content")
-    function show(i) {
-        contents[0].style.display = "none";
-        contents[1].style.display = "none";
-        contents[2].style.display = "none";
-        contents[3].style.display = "none";
-        contents[4].style.display = "none";
+    const contents = document.querySelectorAll(".detail-main-content");
+    const show = (i) => {
+        for(let j = 0; j < contents.length;j++){
+            contents[j].style.display = "none";   
+        }
         contents[i].style.display = "block";
-    };
+        
+        
+    }
+    
     links.forEach((el) => {
         var i = 0;
         el.addEventListener('click', function (){
