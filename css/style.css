@@ -23,7 +23,7 @@ html {
     font-size: 62.5%; }
   
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     line-height: 1.6;
     background-image: white;
@@ -32,12 +32,30 @@ body {
     height: 100vh;
     color: var(--color-grey-dark-2); }
 
+
+    
+.margin-top-small{
+    margin-top: 1rem;
+} 
+
+.margin-top-middle{
+    margin-top: 2rem;
+}
+
+.margin-top-large{
+    margin-top: 4rem;
+}
+
 .container{
     display: flex;
     flex-wrap: wrap;
 }    
 
-
+.main-menu{
+    border-bottom: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--color-grey-dark-3);
+}
 
 .main-menu ul{
     display: flex;
@@ -192,13 +210,22 @@ body {
 }
 
 .main-content .read_more{
-    background-image: url("../img/brush-3.png");
+    background-image: url("../img/brush-hover.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+}
+
+.read_more a:hover{
+    background-image: url("../img/brush-3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    padding: 2.9rem;
+    color: var(--color-grey-light-1);
 }
 
 .fr-link, .de-link, .vi-link, .es-link{
@@ -206,11 +233,15 @@ body {
 }
 
 .read_more a{
-    color: white;
+    color: var(--color-primary);
     font-size: 2rem;
+    text-decoration: none;
 }
 
 .main-footer{
+    border-top: dashed;
+    border-top-width: 1px;
+    border-top-color: var(--color-grey-dark-3);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -249,7 +280,7 @@ body {
 
 .footer-social{
     position: absolute;
-    right: 25rem;
+    right: 28rem;
 }
 
 .footer-social i{
