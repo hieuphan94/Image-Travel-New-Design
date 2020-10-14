@@ -80,8 +80,8 @@ body {
 }
 
 .brush img{
-    width: 35px !important;
-    height: 55px !important;
+    width: 17px !important;
+    height: auto;
 }
 
 .main-menu ul li img{
