@@ -9,7 +9,15 @@
     --color-grey-dark-1: #333;
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999;
-    --shadow-dark: rgba(0, 0, 0, 0.8); }
+    --shadow-dark: rgba(0, 0, 0, 0.8); 
+
+    /* --bp-largest: 75em;
+    --bp-large: 68.75em;
+    --bp-medium: 56.25em;
+    --bp-small: 37.5em;
+    --bp-smallest: 31.25em; */
+}
+
 
 * {
     margin: 0;
@@ -21,6 +29,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; }
+
   
 body {
     font-family: "Poppins", sans-serif;
@@ -290,3 +299,88 @@ body {
 }
 
 
+@media only screen and (max-width: 68.75em) {
+    html{font-size: 50%;}
+    body{
+        color: #fff;
+    }
+    .slider {
+        position: absolute;
+        left: 2rem;
+        top: 6.6rem;
+    }
+    .main-content {
+        padding: 5rem 3rem;
+        background-color: #0000003d;
+    }
+    .brush img {
+        width: 1.2rem !important;
+    }
+    .main-menu ul {
+        justify-content: space-around;
+    }
+    .main-menu ul li .brush {
+        top: -0.4rem;
+        right: -1.3rem;
+    }
+    .main-menu ul li a {
+        font-size: 0.9rem;
+    }
+    .main-menu ul li img {
+        width: 20px;
+    }
+
+    .main-content h3 {
+        font-size: 5.5rem;
+    }
+
+    .main-content p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .main-footer {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 2rem 0;
+        flex-direction: row;
+    }
+    .footer-img img {
+        width: 6.5rem;
+    }
+    .footer-content.left, .footer-content.footer-img{
+        margin-right: 0.5rem;
+    }
+    .footer-content.left p{
+        width: 13.3rem;
+    }
+    .footer-content.right p{
+        width: 18.2rem;
+    }
+    .footer-img {
+        order: -1;
+    }
+
+    .footer-content p{
+        font-size: 1rem;
+        text-align: left !important;
+    }
+
+    .footer-social, .copyright {
+        bottom: -7rem;
+        padding: 2rem 1rem;
+        background: var(--color-grey-dark-1)
+    }
+
+    .footer-social{
+        left: 0;
+        right: 0;
+    }
+
+    .copyright {
+        right: 0;
+    }
+}    
